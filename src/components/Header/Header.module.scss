@@ -1,0 +1,10 @@
+.header{
+    background: #20232a;
+    padding: 2.375rem 0.75rem;
+    text-align: center;
+    color: var(--c-white);
+    &__title{
+        font-weight: 900;
+        font-size: 2rem;
+    }
+}

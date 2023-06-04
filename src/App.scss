@@ -1,0 +1,76 @@
+@import './helpers.scss';
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+:root{
+    --ff: 'Montserrat', sans-serif;
+    --fs-default: 1rem;
+    --transition: all 150ms ease-in-out;
+    --bg-body: #F9F9FB;
+    --c-text: #8A8B8D;
+    --c-title: #191B2C;
+    --c-blue: #748EFC;
+    --c-blue-rgb: 116, 142, 252;
+    --c-dark-blue: #3B4D9A;
+    --c-dark-blue-rgb: 59, 77, 154;
+    --c-white: #ffffff;
+    --c-white-rgb: 255, 255, 255;
+    
+    --bg-scrollbar-track-rgb: var(--c-white-rgb);
+    --bg-scrollbar-thumb: var(--c-blue);
+    --bg-scrollbar-thumb-rgb: var(--c-blue-rgb);
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-track {
+    background: rgba(var(--bg-scrollbar-track-rgb),.2);
+    border-radius: 6px;
+}
+::-webkit-scrollbar-thumb {
+    background: var(--bg-scrollbar-thumb);
+    border-radius: 6px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(var(--bg-scrollbar-thumb-hover-rgb),.8);
+}
+
+body {
+    font-family: var(--ff);
+    font-size: var(--fs-default,1rem);
+    background-color: var(--bg-body);
+    color: var(--c-text);
+    line-height: 1.2;
+}
+img {
+    max-width: 100%;
+    height: auto;
+}
+a {
+    display: inline-block;
+    color: inherit;
+    transition: var(--transition);
+    &:hover{
+        color: inherit;
+    }
+}
+button {
+    background-color: transparent;
+    color: inherit;
+    cursor: pointer;
+    transition: var(--transition);
+}
+kbd {
+    padding: 0.1875rem 0.375rem;
+    font-size: 0.875em;
+    color: #fff;
+    background-color: #212529;
+    border-radius: 0.25rem;
+}
+
+.container{
+    margin: calc(1.5rem * .5);
+    @include min_mq("md"){
+        margin: 1.5rem;
+    }
+}
