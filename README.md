@@ -1,6 +1,6 @@
 # Search Image App from Unsplah API with React.js
 
-This project allows us to search for images. I developed it with React.js. We get images via Unsplash APIs.
+This project allows us to search for images. I developed it with React.js. We get images via Unsplash APIs. This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Installation
 
