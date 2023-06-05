@@ -1,0 +1,6 @@
+.image__wrapper{
+    --offset: 1rem;
+    columns: 200px 5;
+    column-gap: var(--offset);
+    margin-top: 2.5rem;
+}

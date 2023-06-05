@@ -5,15 +5,15 @@ function SearchArea({search}) {
   const [value, setValue] = useState('');
   const handleSubmit = (e)=>{
     e.preventDefault();
-    search('can');
+    search(value);
   }
   const changeValue = (e)=>{
     setValue(e.target.value);
   }
   return (
     <form action="GET" onSubmit={handleSubmit} className={styles.search__wrapper}>
-      <label className="" htmlFor="lfor-search">Search images</label>
-      <input type="text" id="lfor-search" className="form-control" value={value} onChange={changeValue}/>
+      <label className={styles.form__label} htmlFor="lfor-search">Search images:</label>
+      <input type="text" name="search" id="lfor-search" className={styles.form__control} value={value} onChange={changeValue}/>
     </form>
   );
 }
