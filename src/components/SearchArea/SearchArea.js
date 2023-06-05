@@ -1,10 +1,16 @@
 import styles from "./SearchArea.module.scss";
 
-function SearchArea() {
+
+function SearchArea({search}) {
+  const handleSubmit = (e)=>{
+    e.preventDefault();
+    search('can');
+  }
   return (
-    <div className={styles.search__wrapper}>
-      searh
-    </div>
+    <form action="GET" onSubmit={handleSubmit} className={styles.search__wrapper}>
+      <label className="" htmlFor="lfor-search">Search images</label>
+      <input type="text" id="lfor-search" className="form-control"/>
+    </form>
   );
 }
 
